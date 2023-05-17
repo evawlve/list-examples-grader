@@ -10,7 +10,7 @@ class IsMoon implements StringChecker {
 }
 
 public class TestListExamples {
-  @Test
+  @Test (timeout = 500)
   public void testMergeRightEnd() {
     List<String> left = Arrays.asList("a", "b", "c");
     List<String> right = Arrays.asList("a", "d");

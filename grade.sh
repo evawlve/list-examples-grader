@@ -21,8 +21,9 @@ cp -r lib grading-area
 
 # Compile the student's code and the JUnit test cases
 cd grading-area
-#javac -cp $CPATH ListExamples.java TestListExamples.java
+
 javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" *.java
+
 # Check if the compilation was successful
 if [ $? -ne 0 ]; then
   echo "ERROR: Compilation failed. Please check your code and try again."
@@ -39,8 +40,4 @@ else
   echo "PASS"
 fi
 
-# Draw a picture/take notes on the directory structure that's set up after
-# getting to this point
 
-# Then, add here code to compile and run, and do any post-processing of the
-# tests
